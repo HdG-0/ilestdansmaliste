@@ -1,0 +1,28 @@
+baseURL: "https://ilestdansmaliste.fr/"
+title: Il est dans ma liste !
+paginate: 9
+
+params:
+  profile:
+    enabled: true
+    name: Nous n'avons pas le temps pour les mauvais films.
+    description: |
+      Nous envoyer un mail : contact@ilestdansmaliste.fr
+    mail: contact@ilestdansmaliste.fr
+    description_bis: |
+      Nous proposer une critique : proposition@ilestdansmaliste.fr
+    mail_bis: proposition@ilestdansmaliste.fr
+  footer:
+    comment: |
+      Créé à partir du thème : https://github.com/nightswinger/hugo-theme-coyote
+    
+
+menu:
+  main:
+    - identifier: search
+      name: Search
+      url: search/
+outputs:
+    home:
+        - HTML
+        - JSON

@@ -1,0 +1,21 @@
+<section class="profile">
+  {{- with site.Params.profile }}
+    {{ if .enabled }}
+    <div class="profile__inner">
+      <div class="profile__body">
+        <h3 class="profile__name">{{ .name }}</h3>
+        <a href="mailto:{{ .mail }}" class="profile__description">{{ .description }}</a>
+        <br />
+        <a href="mailto:{{ .mail_bis }}" class="profile__description">{{ .description_bis }}</a>
+        <div class="profile__social">
+          {{ range site.Params.social }}
+          <a href="{{ .url }}" target="_blank">
+            {{ partial "icons.html" . }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  {{- end }}
+</section>
